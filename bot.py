@@ -82,6 +82,7 @@ async def load_resize(message:types.Message, state:FSMContext):
     async  with  state.proxy() as data:
         data['sign'] = message.text
 
+
     await cmd_resize(message, data)
     await state.finish()
     await message.answer('Еще фото?\n/start\n')
